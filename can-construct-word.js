@@ -2,7 +2,8 @@
 
 // add whatever parameters you deem necessary & write doc comment
 
-/** creates frequency counter object of each input item */
+/** creates frequency counter object of each input item,  */
+// specify return object
 function getFrequencyCounter(items) {
   const freqs = {};
 
@@ -16,14 +17,13 @@ function getFrequencyCounter(items) {
 
 /** compares if there are enough letters input to construct input words  */
 function canConstructWord(words, letters) {
+  // wordFreqs and letterFreqs
   const freqs1 = getFrequencyCounter(words); // O(w)
   const freqs2 = getFrequencyCounter(letters); // O(k)
-  debugger
 
+  // what are object keys?
   for (let key in freqs1){ // O(w)
-    debugger
     if (!(key in freqs2)){
-      debugger
       return false;
     }
 
@@ -35,7 +35,7 @@ function canConstructWord(words, letters) {
   return true;
 }
 
-// TC = O(w + w + k) = O(2w + k)
+// TC = O(2w + k) = O(w + k)
 
 //use frequency counter
 //create two objects, one for each string

@@ -3,9 +3,10 @@
 // add whatever parameters you deem necessary & write docstring
 
 /** take in sorted array of numbers and target average,
- *  determine if there's a pair whose average equals to target average
+ * returns boolean based if target average of pairs is found
 */
 function averagePair(nums, targetAvg ) {
+  // can do start and end pointers
   let left = 0;
   let right = nums.length - 1;
 
